@@ -1,5 +1,5 @@
-hash: ab1322ca6d24e40907af3a701959880ad721afa2e1b67eaf0c945bb74c9a5c30
-updated: 2017-04-28T12:53:43.461401871+02:00
+hash: efac3cbb182b777aa3ca3c51753fdcd678c0a367a2971f097076cf0a9c7b4d26
+updated: 2020-04-28T11:34:56.814016+09:00
 imports:
 - name: github.com/afex/hystrix-go
   version: 39520ddd07a9d9a071d615f7476798659f5a3b89
@@ -55,7 +55,7 @@ imports:
 - name: github.com/gorilla/context
   version: 08b5f424b9271eedf6f9f0ce86cb9396ed337a42
 - name: github.com/gorilla/mux
-  version: cf79e51a62d8219d52060dfc1b4e810414ba2d15
+  version: 75dcda0896e109a2a22c9315bca3bb21b87b2ba5
 - name: github.com/klauspost/crc32
   version: cb6bfca970f6908083f26f39a79009d608efd5cd
 - name: github.com/kr/logfmt
@@ -64,6 +64,18 @@ imports:
   version: c12348ce28de40eed0136aa2b644d0ee0650e56c
   subpackages:
   - pbutil
+- name: github.com/newrelic/go-agent
+  version: 178f6e3d7e12c08bc840d8d2df3725166dbd407e
+  subpackages:
+  - v3
+  - v3/integrations/nrgorilla
+  - v3/internal
+  - v3/internal/cat
+  - v3/internal/jsonx
+  - v3/internal/logger
+  - v3/internal/sysinfo
+  - v3/internal/utilization
+  - v3/newrelic
 - name: github.com/opentracing/opentracing-go
   version: 5e5abf838007b08f96ae057bc182636a178da0b9
   subpackages:

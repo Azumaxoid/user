@@ -11,6 +11,7 @@ import:
   - transport/http
   - circuitbreaker
 - package: github.com/gorilla/mux
+  version: 75dcda0896e109a2a22c9315bca3bb21b87b2ba5
 - package: github.com/opentracing/opentracing-go
 - package: github.com/openzipkin/zipkin-go-opentracing
 - package: github.com/prometheus/client_golang
@@ -28,3 +29,7 @@ import:
 - package: github.com/weaveworks/common
   subpackages:
   - middleware
+- package: github.com/newrelic/go-agent
+  subpackages:
+  - v3
+  - v3/integrations/nrgorilla
