@@ -4,7 +4,7 @@ services:
     user:
         build:
             context: .
-        image: azumaxoid/user
+        image: azumax/user
         hostname: user
         restart: always
         cap_drop:
@@ -18,11 +18,11 @@ services:
             - NEW_RELIC_APP_NAME=micro-user
             - NEW_RELIC_LICENSE_KEY=***
         ports:
-            - "8080:80"
+            - "8080:8084"
     user-db:
         build:
             context: ./docker/user-db/
-        image: weaveworksdemos/user-db
+        image: azumax/user-db
         hostname: user-db
         restart: always
         cap_drop:
