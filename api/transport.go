@@ -51,55 +51,55 @@ func MakeHTTPHandler(e Endpoints, logger log.Logger, tracer stdopentracing.Trace
 	// GET /register    Register
 	// GET /health      Health Check
 
-	r.Methods("GET").Path("/login").Handler(httptransport.NewServer(
+	r.Methods("GET").Path("/users/login").Handler(httptransport.NewServer(
 		e.LoginEndpoint,
 		decodeLoginRequest,
 		encodeResponse,
 		append(options, httptransport.ServerBefore(opentracing.FromHTTPRequest(tracer, "GET /login", logger)))...,
 	))
-	r.Methods("POST").Path("/register").Handler(httptransport.NewServer(
+	r.Methods("POST").Path("/users/register").Handler(httptransport.NewServer(
 		e.RegisterEndpoint,
 		decodeRegisterRequest,
 		encodeResponse,
 		append(options, httptransport.ServerBefore(opentracing.FromHTTPRequest(tracer, "POST /register", logger)))...,
 	))
-	r.Methods("GET").PathPrefix("/customers").Handler(httptransport.NewServer(
+	r.Methods("GET").PathPrefix("/users/customers").Handler(httptransport.NewServer(
 		e.UserGetEndpoint,
 		decodeGetRequest,
 		encodeResponse,
 		append(options, httptransport.ServerBefore(opentracing.FromHTTPRequest(tracer, "GET /customers", logger)))...,
 	))
-	r.Methods("GET").PathPrefix("/cards").Handler(httptransport.NewServer(
+	r.Methods("GET").PathPrefix("/users/cards").Handler(httptransport.NewServer(
 		e.CardGetEndpoint,
 		decodeGetRequest,
 		encodeResponse,
 		append(options, httptransport.ServerBefore(opentracing.FromHTTPRequest(tracer, "GET /cards", logger)))...,
 	))
-	r.Methods("GET").PathPrefix("/addresses").Handler(httptransport.NewServer(
+	r.Methods("GET").PathPrefix("/users/addresses").Handler(httptransport.NewServer(
 		e.AddressGetEndpoint,
 		decodeGetRequest,
 		encodeResponse,
 		append(options, httptransport.ServerBefore(opentracing.FromHTTPRequest(tracer, "GET /addresses", logger)))...,
 	))
-	r.Methods("POST").Path("/customers").Handler(httptransport.NewServer(
+	r.Methods("POST").Path("/users/customers").Handler(httptransport.NewServer(
 		e.UserPostEndpoint,
 		decodeUserRequest,
 		encodeResponse,
 		append(options, httptransport.ServerBefore(opentracing.FromHTTPRequest(tracer, "POST /customers", logger)))...,
 	))
-	r.Methods("POST").Path("/addresses").Handler(httptransport.NewServer(
+	r.Methods("POST").Path("/users/addresses").Handler(httptransport.NewServer(
 		e.AddressPostEndpoint,
 		decodeAddressRequest,
 		encodeResponse,
 		append(options, httptransport.ServerBefore(opentracing.FromHTTPRequest(tracer, "POST /addresses", logger)))...,
 	))
-	r.Methods("POST").Path("/cards").Handler(httptransport.NewServer(
+	r.Methods("POST").Path("/users/cards").Handler(httptransport.NewServer(
 		e.CardPostEndpoint,
 		decodeCardRequest,
 		encodeResponse,
 		append(options, httptransport.ServerBefore(opentracing.FromHTTPRequest(tracer, "POST /cards", logger)))...,
 	))
-	r.Methods("DELETE").PathPrefix("/").Handler(httptransport.NewServer(
+	r.Methods("DELETE").PathPrefix("/users/").Handler(httptransport.NewServer(
 		e.DeleteEndpoint,
 		decodeDeleteRequest,
 		encodeResponse,
