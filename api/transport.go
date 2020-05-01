@@ -15,7 +15,7 @@ import (
 	"github.com/go-kit/kit/tracing/opentracing"
 	httptransport "github.com/go-kit/kit/transport/http"
 	"github.com/gorilla/mux"
-	"github.com/microservices-demo/user/users"
+	"github.com/Azumaxoid/user/users"
 	stdopentracing "github.com/opentracing/opentracing-go"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	newrelic "github.com/newrelic/go-agent/v3/newrelic"

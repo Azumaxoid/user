@@ -3,7 +3,7 @@ package api
 import (
 	"testing"
 
-	"github.com/microservices-demo/user/users"
+	"github.com/Azumaxoid/user/users"
 )
 
 var (

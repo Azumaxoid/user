@@ -10,8 +10,8 @@ import (
 	"io"
 	"time"
 
-	"github.com/microservices-demo/user/db"
-	"github.com/microservices-demo/user/users"
+	"github.com/Azumaxoid/user/db"
+	"github.com/Azumaxoid/user/users"
 )
 
 var (

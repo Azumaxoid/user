@@ -9,8 +9,8 @@ import (
 
 	"github.com/go-kit/kit/endpoint"
 	"github.com/go-kit/kit/tracing/opentracing"
-	"github.com/microservices-demo/user/db"
-	"github.com/microservices-demo/user/users"
+	"github.com/Azumaxoid/user/db"
+	"github.com/Azumaxoid/user/users"
 	stdopentracing "github.com/opentracing/opentracing-go"
 )
 
